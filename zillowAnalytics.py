@@ -97,15 +97,3 @@ with DAG('zillow_analytics_dag',
         
         extract_zillow_data_var >> load_to_s3_bucket >> trsfm_file_check_in_s3 >> load_to_redshift_from_s3
              
-
-#     CREATE TABLE zillowdata (
-#     bathrooms NUMERIC,
-#     bedrooms NUMERIC,
-#     city VARCHAR(255),
-#     homeStatus VARCHAR(255),
-#     homeType VARCHAR(255),
-#     livingArea NUMERIC,
-#     price NUMERIC,
-#     rentZestimate NUMERIC,
-#     zipcode INT
-# );
