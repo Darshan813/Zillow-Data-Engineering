@@ -6,14 +6,12 @@
   
   
 
-
--> The Project Extract the data using the Zillow Rapid Api.  
--> After the data is Extracted the file is stored in the AWS EC2 Server.  
--> The file is than transfer to the AWS S3 bucket using Airflow, this bucket stores all the original data.   
--> After this step, the Lambda function transfers the file from the main S3 bucket to the copy of the S3 bucket, this bucket data will be used for further transformation.   
--> When the file is transfered to the copy_data bucket, another lambda function is triggered and this lambda function contains the transformdata code, which further transform the data and store it in the new S3 bucket in the csv format.  
--> If this process is success, the Airflow will run the s3 keysensor task where it will check whether the transform file is in the transformdata bucket, if it is present it will load the data into the Redshift datawarehouse.  
--> After loading the data into the redshift, we will then connect the quicksight for further analysis and visualization.  
+The Airflow runs on the EC2 server which run's the dag, where the first task is extracting the data from the Rapid API using the python operator.  
+-> Using Apache Airflow, the data is then transferred from the EC2 server to an AWS S3 bucket, serving as the main storage for the original data.   
+-> A Lambda function moves the file from the main S3 bucket to a secondary S3 bucket i.e copy_data bucket, designated for further transformations.       
+-> When the file is transfered to the copy_data bucket, another lambda function is triggered and this lambda function contains the transform_data code, which further transform the data and store it in the new S3 bucket in the csv format.    
+-> Once the transformation is successful, Airflow runs an S3 Key Sensor task. It checks for the presence of the transformed file in the transform_data bucket. If the file is found, the file is then transferred to the Redshift data warehouse.  
+-> With the data successfully loaded into Redshift, Amazon QuickSight is connected to the data warehouse for in-depth analysis and visualization.  
   
 Here are some visualizations, I have made.  
 
