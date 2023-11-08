@@ -1,7 +1,7 @@
 #Zillow End to End Data Engineering Project   
   
    
-![DE pipeline image](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/e870a27b-e44d-44ca-bfc9-8304e7ce114a)     
+![DE pipeline image](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/e870a27b-e44d-44ca-bfc9-8304e7ce114a)       
     
     
     
@@ -13,7 +13,7 @@ The Airflow runs on the EC2 server which run's the dag, where the first task is 
 -> Once the transformation is successful, Airflow runs an S3 Key Sensor task. It checks for the presence of the transformed file in the transform_data bucket. If the file is found, the file is then transferred to the Redshift data warehouse.  
 -> With the data successfully loaded into Redshift, Amazon QuickSight is connected to the data warehouse for in-depth analysis and visualization.  
   
-Here are some visualizations, I have made.  
+Here are some visualizations.  
 
 ![visualize1](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/a1056222-4100-4d9a-9749-fb471a3e7f13)   
 
