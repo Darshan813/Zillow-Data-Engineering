@@ -4,12 +4,6 @@
 ![DE pipeline image](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/e870a27b-e44d-44ca-bfc9-8304e7ce114a)       
 
 
-
-
-
-
-  
-  
 The Airflow runs on the EC2 server which run's the dag, where the first task is extracting the data from the Rapid API using the python operator.  
 
 ![AirflwoDagImage](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/6d4db832-ddd7-474c-a44c-1b200a573b4c)  
@@ -23,8 +17,6 @@ The Airflow runs on the EC2 server which run's the dag, where the first task is 
 Here are some visualizations.  
 
 ![visualize1](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/a1056222-4100-4d9a-9749-fb471a3e7f13)   
-
-  
 
 
 ![visualize2](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/17bd5622-a182-4114-8d2e-1fa4b0c14506)  
