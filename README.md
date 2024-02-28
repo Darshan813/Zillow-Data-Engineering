@@ -4,9 +4,7 @@
 ![DE pipeline image](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/e870a27b-e44d-44ca-bfc9-8304e7ce114a)       
 
 
-The Airflow runs on the EC2 server which run's the dag, where the first task is extracting the data from the Rapid API using the python operator.  
-
-![AirflwoDagImage](https://github.com/Darshan813/Zillow-Data-Engineering/assets/79681552/6d4db832-ddd7-474c-a44c-1b200a573b4c)  
+The Airflow runs on the EC2 server which run's the dag, where the first task is extracting the data from the Rapid API using the python operator.   
   
 -> Using Apache Airflow, the data is then transferred from the EC2 server to an AWS S3 bucket, serving as the main storage for the original data.   
 -> A Lambda function moves the file from the main S3 bucket to a secondary S3 bucket i.e copy_data bucket, designated for further transformations.       
